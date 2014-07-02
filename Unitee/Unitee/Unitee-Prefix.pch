@@ -1,0 +1,42 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+#import "HSYNavigationController.h"
+
+#endif
+
+
+//appstore
+#define APP_URL @"http://itunes.apple.com/lookup?id="
+#define APP_URL2 @"itms-apps://itunes.apple.com/cn/app/guang-dian-bi-zhi/id"
+#define APP_URL_UPDATE  @"http://itunes.apple.com/cn/app/id"
+
+//推介商家
+#define TuiJianShangJia @"/appyuyueAction_getStoreTuiJian?number=5"
+//优惠劵团购
+#define YouHuiJuanTuiJian @"/appcouponsAction_mainTuijian?number=6"
+#define RequestUrlString @"http://yryc.zhigaodiannet.com/app"
+
+
+
+
+
+#define iPhone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)//判断iphone5
+
+#define ScreenHeight [[UIScreen mainScreen] bounds].size.height
+#define ScreenWidth [[UIScreen mainScreen] bounds].size.width
+#define UIDeviceSystemVersion [[[UIDevice currentDevice] systemVersion] doubleValue]
+
+
